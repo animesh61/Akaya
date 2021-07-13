@@ -1,10 +1,12 @@
 package com.example.akaya.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.akaya.R
+import com.example.akaya.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -13,7 +15,9 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            // No Activity To Load
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }, 1000)
     }
 }

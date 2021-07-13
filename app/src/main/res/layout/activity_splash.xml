@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/splash_blue">
-
     <ImageView
-        android:layout_width="248dp"
-        android:layout_height="190dp"
+        android:layout_width="@dimen/_248sdp"
+        android:layout_height="@dimen/_190sdp"
         android:layout_centerInParent="true"
         android:src="@drawable/white_logo_transparent_background"
         android:scaleType="fitCenter"
