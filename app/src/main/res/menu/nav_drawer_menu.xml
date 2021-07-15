@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_MyProfile"
+        android:title="My Profile"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/nav_MyOrders"
+        android:title="My Orders"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/nav_MyAddress"
+        android:title="My Address"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/nav_MyCart"
+        android:title="My Cart"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/nav_Logout"
+        android:title="Logout"
+        tools:ignore="HardcodedText" />
+
+</menu>
