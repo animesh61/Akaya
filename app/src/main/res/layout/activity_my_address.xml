@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +24,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_menu_blue" />
+            app:srcCompat="@drawable/ic_menu_blue"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView28"
@@ -36,7 +38,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.cardview.widget.CardView
@@ -67,7 +70,8 @@
                 android:textColor="@color/login_blue_500"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView101"
@@ -79,7 +83,8 @@
                 android:text="Jennifer Sterk"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView100" />
+                app:layout_constraintTop_toBottomOf="@+id/textView100"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView102"
@@ -91,7 +96,8 @@
                 android:text="123 Lorem Street, Dolor City, State 56788"
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView101" />
+                app:layout_constraintTop_toBottomOf="@+id/textView101"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView103"
@@ -99,14 +105,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:drawableLeft="@drawable/ic_trash_blue"
                 android:fontFamily="@font/rubik_semibold"
                 android:gravity="center"
                 android:text=" Remove"
                 android:textColor="@color/login_blue_500"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView102" />
+                app:layout_constraintTop_toBottomOf="@+id/textView102"
+                app:drawableLeftCompat="@drawable/ic_trash_blue"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView104"
@@ -114,13 +121,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:drawableLeft="@drawable/ic_pen_blue_fill"
                 android:fontFamily="@font/rubik_semibold"
                 android:text=" Edit Address"
                 android:textColor="@color/login_blue_500"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/textView103"
-                app:layout_constraintTop_toBottomOf="@+id/textView102" />
+                app:layout_constraintTop_toBottomOf="@+id/textView102"
+                app:drawableLeftCompat="@drawable/ic_pen_blue_fill"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -152,7 +160,8 @@
                 android:textColor="@color/login_blue_500"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView201"
@@ -164,7 +173,8 @@
                 android:text="Jennifer Sterk"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView200" />
+                app:layout_constraintTop_toBottomOf="@+id/textView200"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView202"
@@ -176,7 +186,8 @@
                 android:text="123 Lorem Street, Dolor City, State 56788"
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView201" />
+                app:layout_constraintTop_toBottomOf="@+id/textView201"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView203"
@@ -184,14 +195,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:drawableLeft="@drawable/ic_trash_blue"
                 android:fontFamily="@font/rubik_semibold"
                 android:gravity="center"
                 android:text=" Remove"
                 android:textColor="@color/login_blue_500"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView202" />
+                app:layout_constraintTop_toBottomOf="@+id/textView202"
+                app:drawableLeftCompat="@drawable/ic_trash_blue"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView204"
@@ -199,13 +211,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:drawableLeft="@drawable/ic_pen_blue_fill"
                 android:fontFamily="@font/rubik_semibold"
                 android:text=" Edit Address"
                 android:textColor="@color/login_blue_500"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/textView203"
-                app:layout_constraintTop_toBottomOf="@+id/textView202" />
+                app:layout_constraintTop_toBottomOf="@+id/textView202"
+                app:drawableLeftCompat="@drawable/ic_pen_blue_fill"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -234,7 +247,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_add_location_blue_fill" />
+                app:srcCompat="@drawable/ic_add_location_blue_fill"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -247,7 +261,8 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView19"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -259,7 +274,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:baselineAligned="false">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -271,7 +287,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_home_grey" />
+                app:srcCompat="@drawable/ic_home_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -284,7 +301,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_search_grey" />
+                app:srcCompat="@drawable/ic_search_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -297,7 +315,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_cart_grey" />
+                app:srcCompat="@drawable/ic_cart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -310,7 +329,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_heart_grey" />
+                app:srcCompat="@drawable/ic_heart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -323,7 +343,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_profile_grey" />
+                app:srcCompat="@drawable/ic_profile_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
     </LinearLayout>
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,7 +23,8 @@
             android:layout_height="@dimen/_18sdp"
             android:layout_gravity="center|start"
             android:layout_marginStart="@dimen/_15sdp"
-            app:srcCompat="@drawable/ic_menu_blue" />
+            app:srcCompat="@drawable/ic_menu_blue"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,11 +37,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:drawableStart="@drawable/ic_location_blue"
                 android:fontFamily="@font/rubik_regular"
                 android:text=" Home"
                 android:textColor="@color/login_blue_500"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_location_blue"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -49,7 +52,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="A/2 Dummy Street, Dummy State..."
                 android:textColor="@color/login_grey"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </LinearLayout>
 
@@ -62,7 +66,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -70,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|clip_vertical"
             android:layout_marginStart="@dimen/_30sdp"
-            app:srcCompat="@drawable/ic_search_black" />
+            app:srcCompat="@drawable/ic_search_black"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView8"
@@ -81,18 +87,20 @@
             android:fontFamily="@font/rubik_regular"
             android:text="search by items name"
             android:textColor="@color/login_grey"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/home_TopImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:srcCompat="@drawable/home_card" />
+        app:srcCompat="@drawable/home_card"
+        tools:ignore="ContentDescription" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -102,7 +110,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toBottomOf="@+id/home_TopImage">
 
         <TextView
             android:id="@+id/textView11"
@@ -115,7 +123,8 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textView12"
@@ -128,7 +137,8 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
@@ -140,7 +150,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="@dimen/_60sdp"
@@ -156,14 +167,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_apple" />
+                    app:srcCompat="@drawable/ic_apple"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -175,7 +188,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Fruits"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -193,14 +207,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_broccoli" />
+                    app:srcCompat="@drawable/ic_broccoli"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -212,7 +228,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Vegie"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -230,14 +247,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_cheese" />
+                    app:srcCompat="@drawable/ic_cheese"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -249,7 +268,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Dairy"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -267,14 +287,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_meat" />
+                    app:srcCompat="@drawable/ic_meat"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -286,7 +308,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Meat"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -303,7 +326,8 @@
         android:textColor="@color/login_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView10"
@@ -316,7 +340,8 @@
         android:textColor="@color/login_grey"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -326,9 +351,11 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:baselineAligned="false">
 
         <FrameLayout
+            android:id="@+id/home_BottomHome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -338,10 +365,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_bottom_home" />
+                app:srcCompat="@drawable/ic_bottom_home"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/home_BottomSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -351,10 +380,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_search_grey" />
+                app:srcCompat="@drawable/ic_search_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/home_BottomCart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -364,10 +395,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_cart_grey" />
+                app:srcCompat="@drawable/ic_cart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/home_BottomWishlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -377,10 +410,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_heart_grey" />
+                app:srcCompat="@drawable/ic_heart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/home_BottomProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -390,7 +425,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_profile_grey" />
+                app:srcCompat="@drawable/ic_profile_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
     </LinearLayout>
 
@@ -401,7 +437,8 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:baselineAligned="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -430,7 +467,8 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/product" />
+                        app:srcCompat="@drawable/product"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textView15"
@@ -441,7 +479,8 @@
                         android:text="Product Name"
                         android:textColor="@color/login_black"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/textView18"
@@ -454,7 +493,8 @@
                         android:textColor="@color/login_grey"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView15"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/textView19"
@@ -466,7 +506,8 @@
                         android:text="$206.50"
                         android:textColor="@color/login_blue_500"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView18"
+                        tools:ignore="HardcodedText" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -498,7 +539,8 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/product" />
+                        app:srcCompat="@drawable/product"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/textView20"
@@ -510,7 +552,8 @@
                         android:text="Product Name"
                         android:textColor="@color/login_black"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/textView21"
@@ -523,7 +566,8 @@
                         android:textColor="@color/login_grey"
                         android:textSize="12sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView20"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/textView22"
@@ -535,7 +579,8 @@
                         android:text="$206.50"
                         android:textColor="@color/login_blue_500"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView21"
+                        tools:ignore="HardcodedText" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,4 +15,6 @@
     <color name="login_blue_200">#E9F8FF</color>
     <color name="login_blue_500">#1397D5</color>
     <color name="login_grey">#969696</color>
+
+    <color name="akaya_green">#00C42E</color>
 </resources>

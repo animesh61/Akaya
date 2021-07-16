@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,7 +23,8 @@
             android:layout_height="@dimen/_18sdp"
             android:layout_gravity="center|start"
             android:layout_marginStart="@dimen/_15sdp"
-            app:srcCompat="@drawable/ic_menu_blue" />
+            app:srcCompat="@drawable/ic_menu_blue"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,11 +37,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:drawableStart="@drawable/ic_location_blue"
                 android:fontFamily="@font/rubik_regular"
                 android:text=" Home"
                 android:textColor="@color/login_blue_500"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_location_blue"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -49,7 +52,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="A/2 Dummy Street, Dummy State..."
                 android:textColor="@color/login_grey"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </LinearLayout>
 
@@ -62,7 +66,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -70,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|clip_vertical"
             android:layout_marginStart="@dimen/_30sdp"
-            app:srcCompat="@drawable/ic_search_black" />
+            app:srcCompat="@drawable/ic_search_black"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView8"
@@ -81,7 +87,8 @@
             android:fontFamily="@font/rubik_regular"
             android:text="search by items name"
             android:textColor="@color/login_grey"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <TextView
@@ -95,7 +102,8 @@
         android:textColor="@color/login_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -105,7 +113,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23">
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -140,7 +149,8 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_cleaning_tools" />
+                            app:srcCompat="@drawable/ic_cleaning_tools"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/textView24"
@@ -153,7 +163,8 @@
                             android:textSize="12sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView15"
+                            tools:ignore="HardcodedText" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -193,7 +204,8 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_beauty" />
+                            app:srcCompat="@drawable/ic_beauty"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/textView25"
@@ -206,7 +218,8 @@
                             android:textSize="12sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                            tools:ignore="HardcodedText" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -246,7 +259,8 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_dairy_product" />
+                            app:srcCompat="@drawable/ic_dairy_product"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/textView26"
@@ -259,7 +273,8 @@
                             android:textSize="12sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView17"
+                            tools:ignore="HardcodedText" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -277,7 +292,8 @@
         android:textColor="@color/login_black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -288,7 +304,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27">
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="@dimen/_60sdp"
@@ -304,14 +321,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_apple" />
+                    app:srcCompat="@drawable/ic_apple"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -323,7 +342,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Fruits"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -341,14 +361,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_broccoli" />
+                    app:srcCompat="@drawable/ic_broccoli"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -360,7 +382,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Vegie"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -378,14 +401,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_cheese" />
+                    app:srcCompat="@drawable/ic_cheese"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -397,7 +422,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Dairy"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -415,14 +441,16 @@
                 android:layout_weight=".8"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="0dp">
+                app:cardElevation="0dp"
+                tools:ignore="NestedWeights">
 
                 <ImageView
                     android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_meat" />
+                    app:srcCompat="@drawable/ic_meat"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -434,7 +462,8 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Meat"
                 android:textColor="@color/login_blue_500"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -448,7 +477,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:baselineAligned="false">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -460,7 +490,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_home_grey" />
+                app:srcCompat="@drawable/ic_home_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -473,7 +504,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_bottom_search" />
+                app:srcCompat="@drawable/ic_bottom_search"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -486,7 +518,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_cart_grey" />
+                app:srcCompat="@drawable/ic_cart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -499,7 +532,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_heart_grey" />
+                app:srcCompat="@drawable/ic_heart_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <FrameLayout
@@ -512,7 +546,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_profile_grey" />
+                app:srcCompat="@drawable/ic_profile_grey"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
     </LinearLayout>
 
