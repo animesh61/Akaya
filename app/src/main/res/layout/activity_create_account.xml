@@ -42,6 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Title">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/createAccount_Name"
             android:layout_width="0dp"
@@ -51,7 +52,8 @@
             android:layout_weight="1"
             app:cardBackgroundColor="@color/login_blue_200"
             app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="0dp" >
+            app:cardElevation="2dp">
+
             <TextView
                 android:id="@+id/createAccount_FirstName"
                 android:layout_width="wrap_content"
@@ -63,6 +65,7 @@
                 android:textColor="@color/login_blue_500"
                 tools:ignore="HardcodedText" />
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/createAccount_Surname"
             android:layout_width="0dp"
@@ -72,7 +75,8 @@
             android:layout_weight="1"
             app:cardBackgroundColor="@color/login_blue_200"
             app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="0dp" >
+            app:cardElevation="2dp">
+
             <TextView
                 android:id="@+id/createAccount_LastName"
                 android:layout_width="wrap_content"
@@ -95,10 +99,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_200"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_FullName" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_FullName">
+
         <TextView
             android:id="@+id/createAccount_EmailID"
             android:layout_width="wrap_content"
@@ -120,10 +125,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_200"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_Email" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_Email">
+
         <TextView
             android:id="@+id/createAccount_MobileNo"
             android:layout_width="wrap_content"
@@ -145,10 +151,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_200"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_Mobile" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_Mobile">
+
         <TextView
             android:id="@+id/createAccount_CountryText"
             android:layout_width="wrap_content"
@@ -170,10 +177,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_200"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_Country" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_Country">
+
         <TextView
             android:id="@+id/createAccount_PasswordText"
             android:layout_width="wrap_content"
@@ -195,10 +203,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_200"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_Password" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_Password">
+
         <TextView
             android:id="@+id/createAccount_ConfirmText"
             android:layout_width="wrap_content"
@@ -220,10 +229,11 @@
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardBackgroundColor="@color/login_blue_500"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="0dp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount_Confirm" >
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_Confirm">
+
         <TextView
             android:id="@+id/createAccount_SignUpText"
             android:layout_width="wrap_content"

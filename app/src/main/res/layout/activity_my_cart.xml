@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -47,7 +48,7 @@
         android:id="@+id/view7"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:background="@color/login_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -62,7 +63,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view7">
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        android:baselineAligned="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -80,7 +82,8 @@
                 android:textColor="@color/login_black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView81"
@@ -92,7 +95,8 @@
                 android:text="$200.49"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView77" />
+                app:layout_constraintTop_toBottomOf="@+id/textView77"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView82"
@@ -103,7 +107,8 @@
                 android:text="/unit"
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toEndOf="@+id/textView81"
-                app:layout_constraintTop_toBottomOf="@+id/textView77" />
+                app:layout_constraintTop_toBottomOf="@+id/textView77"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView15"
@@ -113,6 +118,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView81">
 
@@ -121,7 +127,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_minus_blue" />
+                    app:srcCompat="@drawable/ic_minus_blue"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -135,7 +142,8 @@
                 android:textColor="@color/login_black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView15"
-                app:layout_constraintTop_toBottomOf="@+id/textView81" />
+                app:layout_constraintTop_toBottomOf="@+id/textView81"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView16"
@@ -145,6 +153,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 app:cardBackgroundColor="@color/login_blue_500"
                 app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="2dp"
                 app:layout_constraintStart_toEndOf="@+id/textView83"
                 app:layout_constraintTop_toBottomOf="@+id/textView82">
 
@@ -153,7 +162,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_plus_white" />
+                    app:srcCompat="@drawable/ic_plus_white"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -166,7 +176,8 @@
                 android:text="Delivery Schedule: "
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView15" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView15"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView85"
@@ -177,7 +188,8 @@
                 android:text=" Monthly"
                 android:textColor="@color/login_blue_500"
                 app:layout_constraintStart_toEndOf="@+id/textView84"
-                app:layout_constraintTop_toBottomOf="@+id/cardView15" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView15"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -196,7 +208,8 @@
                 android:textColor="@color/login_blue_500"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:id="@+id/imageView36"
@@ -206,7 +219,8 @@
                 android:layout_marginEnd="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView80"
-                app:srcCompat="@drawable/ic_delete" />
+                app:srcCompat="@drawable/ic_delete"
+                tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -230,7 +244,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8">
+        app:layout_constraintTop_toBottomOf="@+id/view8"
+        android:baselineAligned="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -248,7 +263,8 @@
                 android:textColor="@color/login_black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView181"
@@ -260,7 +276,8 @@
                 android:text="$200.49"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView177" />
+                app:layout_constraintTop_toBottomOf="@+id/textView177"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView182"
@@ -271,7 +288,8 @@
                 android:text="/unit"
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toEndOf="@+id/textView181"
-                app:layout_constraintTop_toBottomOf="@+id/textView177" />
+                app:layout_constraintTop_toBottomOf="@+id/textView177"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView115"
@@ -281,6 +299,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 app:cardBackgroundColor="@color/login_blue_200"
                 app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView181">
 
@@ -289,7 +308,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_minus_blue" />
+                    app:srcCompat="@drawable/ic_minus_blue"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -303,7 +323,8 @@
                 android:textColor="@color/login_black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView115"
-                app:layout_constraintTop_toBottomOf="@+id/textView181" />
+                app:layout_constraintTop_toBottomOf="@+id/textView181"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView116"
@@ -313,6 +334,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 app:cardBackgroundColor="@color/login_blue_500"
                 app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="2dp"
                 app:layout_constraintStart_toEndOf="@+id/textView183"
                 app:layout_constraintTop_toBottomOf="@+id/textView182">
 
@@ -321,7 +343,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_plus_white" />
+                    app:srcCompat="@drawable/ic_plus_white"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -334,7 +357,8 @@
                 android:text="Delivery Schedule: "
                 android:textColor="@color/login_grey"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView115" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView115"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView185"
@@ -342,10 +366,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/rubik_regular"
-                android:text=" Monthly"
+                android:text="Weekly"
                 android:textColor="@color/login_blue_500"
                 app:layout_constraintStart_toEndOf="@+id/textView184"
-                app:layout_constraintTop_toBottomOf="@+id/cardView115" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView115"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -364,7 +389,8 @@
                 android:textColor="@color/login_blue_500"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:id="@+id/imageView136"
@@ -374,7 +400,8 @@
                 android:layout_marginEnd="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView180"
-                app:srcCompat="@drawable/ic_delete" />
+                app:srcCompat="@drawable/ic_delete"
+                tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -421,7 +448,8 @@
             android:layout_gravity="center"
             android:fontFamily="@font/rubik_semibold"
             android:text="Proceed"
-            android:textColor="@color/login_white" />
+            android:textColor="@color/login_white"
+            tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -435,7 +463,8 @@
         android:textColor="@color/login_black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView17"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView88"
@@ -448,5 +477,6 @@
         android:textColor="@color/login_blue_500"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView17"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

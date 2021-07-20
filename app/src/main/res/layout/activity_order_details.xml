@@ -44,10 +44,10 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/_90sdp"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="@dimen/_3sdp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createPassword_TitleBar">
@@ -62,13 +62,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:drawableLeft="@drawable/ic_circle_tick_green"
                 android:fontFamily="@font/rubik_regular"
                 android:text="  Delivered on"
                 android:textColor="@color/akaya_green"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:drawableLeftCompat="@drawable/ic_circle_tick_green"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView39"
@@ -81,7 +82,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView38" />
+                app:layout_constraintTop_toBottomOf="@+id/textView38"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view"
@@ -105,7 +107,8 @@
                 android:textColor="@color/login_black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view" />
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView41"
@@ -117,7 +120,8 @@
                 android:text="$206.50"
                 android:textColor="@color/login_blue_500"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view" />
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -128,10 +132,10 @@
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="@dimen/_3sdp"
+        app:cardElevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -147,7 +151,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView44"
@@ -159,7 +164,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView45"
@@ -172,7 +178,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+                app:layout_constraintTop_toBottomOf="@+id/textView43"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view2"
@@ -195,7 +202,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView47"
@@ -207,7 +215,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView48"
@@ -220,7 +229,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView46" />
+                app:layout_constraintTop_toBottomOf="@+id/textView46"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view3"
@@ -243,7 +253,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view3" />
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView50"
@@ -255,7 +266,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view3" />
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView51"
@@ -268,7 +280,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView49" />
+                app:layout_constraintTop_toBottomOf="@+id/textView49"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view4"
@@ -291,7 +304,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view4" />
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView53"
@@ -303,7 +317,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view4" />
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView54"
@@ -316,7 +331,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+                app:layout_constraintTop_toBottomOf="@+id/textView52"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view5"
@@ -338,7 +354,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view5" />
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView56"
@@ -350,7 +367,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view5" />
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView57"
@@ -363,7 +381,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView55" />
+                app:layout_constraintTop_toBottomOf="@+id/textView55"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:id="@+id/view6"
@@ -386,7 +405,8 @@
                 android:text="Product Name"
                 android:textColor="@color/login_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view6" />
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView59"
@@ -398,7 +418,8 @@
                 android:text="$21.00"
                 android:textColor="@color/login_black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view6" />
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView60"
@@ -411,7 +432,8 @@
                 android:textColor="@color/login_grey"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView58" />
+                app:layout_constraintTop_toBottomOf="@+id/textView58"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
