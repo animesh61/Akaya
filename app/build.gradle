@@ -21,14 +21,39 @@ android {
 
     buildTypes {
         release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                if (variant.buildType.name == "release") {
+                    outputFileName = "Akaya-Release-V" + android.defaultConfig.versionCode + ".apk"
+                } else {
+                    outputFileName = "Akaya-Debug-V" + android.defaultConfig.versionCode + ".apk"
+                }
+            }
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -48,5 +73,10 @@ dependencies {
     //*CUSTOM*//
     implementation 'com.intuit.sdp:sdp-android:1.0.5'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.airbnb.android:lottie:3.6.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     //*END*//
 }

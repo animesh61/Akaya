@@ -14,7 +14,7 @@ class CreateAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
 
-        signInButton = findViewById(R.id.createAccount_SignIn)
+        signInButton = findViewById(R.id.login_SignUp)
 
         signInButton.setOnClickListener {
             val i = Intent(this, LoginActivity::class.java)

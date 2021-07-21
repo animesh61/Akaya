@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_Title">
 
         <LinearLayout
-            android:id="@+id/login_User"
+            android:id="@+id/login_UserParent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -63,17 +63,21 @@
                 app:srcCompat="@drawable/ic_user"
                 tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/login_UserText"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/login_Username"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
                 android:fontFamily="@font/rubik_regular"
+                android:inputType="textPersonName"
                 android:text="username or email"
                 android:textColor="@color/login_blue_500"
-                android:textSize="18sp"
                 tools:ignore="HardcodedText" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -92,7 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_UserCard">
 
         <LinearLayout
-            android:id="@+id/login_Password"
+            android:id="@+id/login_PasswordParent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -106,17 +110,21 @@
                 app:srcCompat="@drawable/ic_lock_unlock"
                 tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/login_PasswordText"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/login_Password"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
                 android:fontFamily="@font/rubik_regular"
+                android:inputType="textPassword"
                 android:text="password"
                 android:textColor="@color/login_blue_500"
-                android:textSize="18sp"
                 tools:ignore="HardcodedText" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -186,7 +194,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/createAccount_SignIn"
+        android:id="@+id/login_SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_15sdp"
