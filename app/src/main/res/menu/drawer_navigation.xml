@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Each item id should be same as in the nav_graph fragment id-->
+
+    <item
+        android:id="@+id/profile_fragment"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/Myorderfragment"
+        android:title="My Orders" />
+    <item
+        android:id="@+id/Myaddressfragment"
+        android:title="AddressFragment" />
+    <item
+        android:id="@+id/cart_fragment"
+        android:title="My Cart" />
+    <item
+        android:id="@+id/LogoutFragment"
+        android:title="Logout" />
+
+
+</menu>

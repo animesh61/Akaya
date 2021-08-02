@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_otp_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify OTP"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableLeft="@drawable/ic_arrow_left2"
+            android:fontFamily="@font/rubik_medium"/>
+        <FrameLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_otp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="center"/>
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify OTP"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter 4 digit OTP sent to your registered mobile number."
+            android:layout_gravity="center"
+            android:textColor="#A5A5A5"
+            android:gravity="center"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="0.2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/rectangle_otp"/>
+            <EditText
+                android:id="@+id/et_otp1"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:layout_weight="0.2"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/rectangle_otp"/>
+            <EditText
+                android:id="@+id/et_otp2"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="0.2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/rectangle_otp"/>
+            <EditText
+                android:id="@+id/et_otp3"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="0.2"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rectangle_otp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/rubik_semibold"
+            android:background="@drawable/rectangle_verify"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend OTP"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/rubik_regular"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

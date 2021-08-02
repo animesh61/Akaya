@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.akaya.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.example.akaya.ui.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search"/>
+    <fragment
+        android:id="@+id/cart_fragment"
+        android:name="com.example.akaya.ui.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart"/>
+
+    <fragment
+        android:id="@+id/whistlist_fragment"
+        android:name="com.example.akaya.ui.wishlist.WhistlistFragment"
+        android:label="WishlistFragment"
+        tools:layout="@layout/fragment_wishlist"/>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.akaya.ui.profile.ProfileFragment"
+        android:label="profilefragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/Myorderfragment"
+        android:name="com.example.akaya.ui.orders.MyorderFragment"
+        android:label="MyorderFragment"
+        tools:layout="@layout/fragment_myorders"/>
+    <fragment
+        android:id="@+id/Myaddressfragment"
+        android:name="com.example.akaya.ui.address.MyAddressFragment"
+        android:label="MyAddressfragment"
+        tools:layout="@layout/fragment_myaddress"/>
+
+
+</navigation>

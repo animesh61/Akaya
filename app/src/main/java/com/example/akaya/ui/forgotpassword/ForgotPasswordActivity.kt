@@ -1,10 +1,10 @@
-package com.example.akaya.ui.login
+package com.example.akaya.ui.forgotpassword
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.Observer
@@ -13,71 +13,54 @@ import com.example.akaya.R
 import com.example.akaya.ui.api.ApiHelperImpl
 import com.example.akaya.ui.api.RetrofitBuilder
 import com.example.akaya.ui.dialog.CustomLoaderDialog
-import com.example.akaya.ui.forgotpassword.ForgotPasswordActivity
-import com.example.akaya.ui.home.Home01Activity
-import com.example.akaya.ui.home.HomeActivity
+import com.example.akaya.ui.login.LoginviewModel
+import com.example.akaya.ui.model.ForgotPasswordRequest
 import com.example.akaya.ui.model.SigninRequest
-import com.example.akaya.ui.register.CreateAccountActivity
 import com.example.akaya.utils.AndroidUtility
+import com.example.akaya.utils.Prefs
 import com.example.akaya.utils.Status
 import com.example.akaya.utils.ViewModelFactory
-import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() {
 
-    private lateinit var signInButton: CardView
-    private lateinit var forgotPasswordButton: TextView
-    private lateinit var signUpButton: LinearLayout
-    private lateinit var viewModel: LoginviewModel
+    private lateinit var sendButton: CardView
+    private lateinit var et_forgot_email:EditText
+    private lateinit var viewModel: ForgotpasswordviewModel
     lateinit var mCustomLoaderDialog: CustomLoaderDialog
+    lateinit var forgotPassword_BackButton:ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-
-        signInButton = findViewById(R.id.login_SignInCard)
-        forgotPasswordButton = findViewById(R.id.login_ForgotPassword)
-        signUpButton = findViewById(R.id.login_SignUp)
-        var login_Username=findViewById(R.id.login_Username)as EditText
-        var login_Password=findViewById(R.id.login_Password)as EditText
+        setContentView(R.layout.activity_forgot_password)
+        et_forgot_email=findViewById(R.id.et_forgot_email)
+        sendButton = findViewById(R.id.forgotPassword_sendCard)
+        forgotPassword_BackButton=findViewById(R.id.forgotPassword_BackButton)
         mCustomLoaderDialog = CustomLoaderDialog(this)
-
         setUpViewModel()
         setupObserver()
 
 
-        signInButton.setOnClickListener {
-//            val i = Intent(this, Home01Activity::class.java)
+        sendButton.setOnClickListener {
+//            val i = Intent(this, CreatePasswordActivity::class.java)
 //            startActivity(i)
-            signinApi()
+            forgotpasswordApi()
         }
-
-        forgotPasswordButton.setOnClickListener {
-            val i = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(i)
-        }
-
-        signUpButton.setOnClickListener {
-            val i = Intent(this, CreateAccountActivity::class.java)
-            startActivity(i)
+        forgotPassword_BackButton.setOnClickListener{
+            onBackPressed()
         }
     }
 
     fun showLoader() {
         mCustomLoaderDialog.show()
     }
+    private fun verifyotp(){
+    }
 
     fun hideLoader() {
         if (mCustomLoaderDialog.isShowing)
             mCustomLoaderDialog.cancel()
     }
-    private fun movetoHome(){
-        val intent=Intent(this,HomeActivity::class.java)
-        startActivity(intent)
-    }
-
-
 
     private fun setUpViewModel() {
         viewModel = ViewModelProviders.of(
@@ -85,29 +68,41 @@ class LoginActivity : AppCompatActivity() {
             ViewModelFactory(
                 ApiHelperImpl(RetrofitBuilder.apiService)
             )
-        ).get(LoginviewModel::class.java)
+        ).get(ForgotpasswordviewModel::class.java)
     }
+
     private fun setupObserver() {
-        viewModel.signinData().observe(this, Observer {
+        viewModel.forgotpassword().observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
                     hideLoader()
                     val baseResponse = it.data
                     val errorCode = baseResponse?.status?.error_code
+                    val otp=baseResponse?.otp
+                    val customerid=baseResponse?.customerId
                     when {
                         (errorCode == 0) -> {
-                            AndroidUtility.showToast(this,"Login Successfully !!" )
-                            movetoHome()
+                            AndroidUtility.showToast(this,"Otp Sent Successfully!!" )
+                            val i=Intent(this,VerifyOtpActivity::class.java)
+                            i.putExtra("otp",otp)
+                            i.putExtra("customerid",customerid)
+                            Prefs.with(this).write("customerid", customerid.toString())
+
+                            startActivity(i)
+
+
 
                         }
                         (errorCode == 1)->{
                             AndroidUtility.showToast(this,baseResponse.status?.message?:"" )
                         }
                     }
+                    Log.e("otp",otp.toString())
+                    Log.e("customerid",customerid.toString())
 
 
 
-            }
+                }
 
 
                 Status.LOADING -> {
@@ -124,11 +119,8 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-    private fun signinApi(){
-        val email=login_Username.text.toString().trim()
-        val password=login_Password.text.toString().trim()
-
-
+    private fun forgotpasswordApi(){
+        val email=et_forgot_email.text.toString().trim()
         when {
             (!AndroidUtility.isNetworkAvailable(this)) -> {
                 AndroidUtility.showToast(this, getString(R.string.please_check_internet))
@@ -137,28 +129,20 @@ class LoginActivity : AppCompatActivity() {
             email == "" -> {
                 AndroidUtility.showToast(this, "Email can't be blank")
                 return
+
             }
             (!AndroidUtility.isValidEmail(email)) -> {
                 AndroidUtility.showToast(this, "Please enter a valid email.")
                 return
             }
-
-            password == "" -> {
-                AndroidUtility.showToast(this, "Password can't be blank")
-                return
-            }
         }
 
-        val signupRequest = SigninRequest().apply {
-            this.Email = email
-            this.Password = password
+        val forgotPasswordRequest = ForgotPasswordRequest().apply {
+            this.EmailId = email
         }
 
-        viewModel.requestsignin(this,signupRequest)
-
-
+        viewModel.requestforgotpassword(this,forgotPasswordRequest)
 
 
     }
-
 }

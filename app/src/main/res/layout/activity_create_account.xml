@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/login_white"
-    tools:context=".ui.login.CreateAccountActivity">
+    tools:context=".ui.register.CreateAccountActivity">
 
     <ImageView
         android:id="@+id/createAccount_Logo"
@@ -54,16 +54,23 @@
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="2dp">
 
-            <TextView
-                android:id="@+id/createAccount_FirstName"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_fname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:background="@null"
+                android:ems="10"
                 android:fontFamily="@font/rubik_regular"
-                android:text="First Name"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:hint="First Name"
+                android:textColorHint="#1397D5"
+                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/login_blue_500"
-                tools:ignore="HardcodedText" />
+                 />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -77,14 +84,20 @@
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="2dp">
 
-            <TextView
-                android:id="@+id/createAccount_LastName"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_lastname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|start"
-                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:background="@null"
+                android:ems="10"
                 android:fontFamily="@font/rubik_regular"
-                android:text="Last Name"
+                android:inputType="text"
+                android:hint="Last Name"
+                android:textColorHint="#1397D5"
+                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/login_blue_500"
                 tools:ignore="HardcodedText" />
         </androidx.cardview.widget.CardView>
@@ -104,14 +117,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_FullName">
 
-        <TextView
-            android:id="@+id/createAccount_EmailID"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:ems="10"
             android:fontFamily="@font/rubik_regular"
-            android:text="Email Id"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:hint="Email Id"
+            android:textColorHint="#1397D5"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/login_blue_500"
             tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
@@ -130,14 +151,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Email">
 
-        <TextView
-            android:id="@+id/createAccount_MobileNo"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_mobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:ems="10"
+            android:maxLength="10"
             android:fontFamily="@font/rubik_regular"
-            android:text="Mobile"
+            android:inputType="number"
+            android:hint="Mobile"
+            android:imeOptions="actionNext"
+            android:textColorHint="#1397D5"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/login_blue_500"
             tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
@@ -156,14 +186,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Mobile">
 
-        <TextView
-            android:id="@+id/createAccount_CountryText"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:ems="10"
             android:fontFamily="@font/rubik_regular"
-            android:text="Country"
+            android:inputType="text"
+            android:hint="Country"
+            android:imeOptions="actionNext"
+            android:textColorHint="#1397D5"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/login_blue_500"
             tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
@@ -182,14 +220,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Country">
 
-        <TextView
-            android:id="@+id/createAccount_PasswordText"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:ems="10"
             android:fontFamily="@font/rubik_regular"
-            android:text="Password"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:imeOptions="actionNext"
+            android:textColorHint="#1397D5"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/login_blue_500"
             tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
@@ -208,14 +254,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Password">
 
-        <TextView
-            android:id="@+id/createAccount_ConfirmText"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_confirmpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|start"
-            android:layout_marginStart="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:ems="10"
             android:fontFamily="@font/rubik_regular"
-            android:text="Confirm Password"
+            android:inputType="textPassword"
+            android:hint="Confirm Password"
+            android:imeOptions="actionDone"
+            android:textColorHint="#1397D5"
+            android:textSize="@dimen/_12sdp"
             android:textColor="@color/login_blue_500"
             tools:ignore="HardcodedText" />
     </androidx.cardview.widget.CardView>
@@ -235,7 +289,7 @@
         app:layout_constraintTop_toBottomOf="@+id/createAccount_Confirm">
 
         <TextView
-            android:id="@+id/createAccount_SignUpText"
+            android:id="@+id/tv_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
