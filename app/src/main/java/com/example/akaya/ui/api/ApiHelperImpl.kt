@@ -15,6 +15,12 @@ class ApiHelperImpl(private val apiService: ApiService) : ApiHelper {
     override suspend fun changepassword(mchangePasswordRequest: ChangePasswordRequest): BaseWrapperResponse =
     apiService.changepassword(mchangePasswordRequest)
 
+    override suspend fun bannerlist(): HomeResult =
+        apiService.bannerlist()
+
+    override suspend fun categorylist(): HomeResult=
+        apiService.categorylist()
+
 
 
 

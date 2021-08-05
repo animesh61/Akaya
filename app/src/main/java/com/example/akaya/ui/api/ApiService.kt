@@ -12,6 +12,10 @@ interface ApiService {
     suspend fun forgotpassword(@Body mForgotPasswordRequest:ForgotPasswordRequest):BaseWrapperResponse
     @POST("Customer/ChangePassword")
     suspend fun changepassword(@Body mchangePasswordRequest:ChangePasswordRequest):BaseWrapperResponse
+    @POST("Product/GetAllOffersList")
+    suspend fun bannerlist():HomeResult
+    @POST("Product/CategoryList")
+    suspend fun categorylist():HomeResult
 
 
 }

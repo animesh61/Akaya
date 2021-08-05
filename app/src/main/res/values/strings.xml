@@ -2,5 +2,8 @@
     <string name="app_name">Akaya</string>
     <string name="please_check_internet">Please check your internet connection and try again</string>
     <string name="something_went_wrong">Something went wrong. Please try again later</string>
+    <string name="navigation_drawer_open">drawerOpen</string>
+    <string name="navigation_drawer_close">drawerClose</string>
+
 
 </resources>

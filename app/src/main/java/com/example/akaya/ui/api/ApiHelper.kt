@@ -8,6 +8,8 @@ interface ApiHelper {
     suspend fun signup(msignupRequest:SignUpRequest): BaseWrapperResponse
     suspend fun forgotpassword(mForgotPasswordRequest: ForgotPasswordRequest):BaseWrapperResponse
     suspend fun changepassword(mchangePasswordRequest: ChangePasswordRequest):BaseWrapperResponse
+    suspend fun bannerlist():HomeResult
+    suspend fun categorylist():HomeResult
 
 
 }

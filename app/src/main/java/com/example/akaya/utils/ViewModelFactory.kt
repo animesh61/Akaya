@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.akaya.ui.api.ApiHelper
 import com.example.akaya.ui.forgotpassword.ChangePasswordviewModel
 import com.example.akaya.ui.forgotpassword.ForgotpasswordviewModel
+import com.example.akaya.ui.home.Homeviewmodel
 import com.example.akaya.ui.login.LoginviewModel
 import com.example.akaya.ui.register.SignUpViewModel
 
@@ -23,6 +24,9 @@ class ViewModelFactory(private val apiHelper: ApiHelper) :
         }
         if(modelClass.isAssignableFrom(ChangePasswordviewModel::class.java)){
             return ChangePasswordviewModel(apiHelper)as T
+        }
+        if(modelClass.isAssignableFrom(Homeviewmodel::class.java)){
+            return Homeviewmodel(apiHelper)as T
         }
 
         /*
