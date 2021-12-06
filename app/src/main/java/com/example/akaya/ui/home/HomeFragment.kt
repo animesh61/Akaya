@@ -33,14 +33,13 @@ class HomeFragment:Fragment() {
     private var rv_banner_list: RecyclerView?=null
     private var rv_categorilist:RecyclerView?=null
     private lateinit var viewModel: Homeviewmodel
+    private lateinit var viewModel1: Homecategoryviewmodel
+
     lateinit var mCustomLoaderDialog: CustomLoaderDialog
     var homeData: ArrayList<offersList> = arrayListOf()
     var categorydata: ArrayList<categoryList> = arrayListOf()
     lateinit var mAdapter: HomeAdapter
     lateinit var mAdapter1: HomecategoriesAdapter
-
-
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mActivity= context as Activity
@@ -51,6 +50,7 @@ class HomeFragment:Fragment() {
 
         initview(mView!!)
         setUpViewModel()
+        setUpViewModel1()
         setupObserver()
         setupObserver1()
         homeapi()
@@ -72,7 +72,7 @@ class HomeFragment:Fragment() {
     }
     private fun homeapi(){
         viewModel.requesthomebanner(mActivity)
-        viewModel.requestcategories(mActivity)
+        viewModel1.requestcategory(mActivity)
     }
 
 //    private fun retrieveList( offersList: List<offersList>) {
@@ -89,6 +89,15 @@ class HomeFragment:Fragment() {
             )
         ).get(Homeviewmodel::class.java)
     }
+    private fun setUpViewModel1() {
+        viewModel1 = ViewModelProviders.of(
+            this,
+            ViewModelFactory(
+                ApiHelperImpl(RetrofitBuilder.apiService)
+            )
+        ).get(Homecategoryviewmodel::class.java)
+    }
+
 
     private fun setupObserver() {
         activity?.let {
@@ -136,7 +145,7 @@ class HomeFragment:Fragment() {
     }
     private fun setupObserver1() {
         activity?.let {
-            viewModel.category().observe(it, Observer {
+            viewModel1.category().observe(it, Observer {
                 when (it.status) {
                     Status.SUCCESS -> {
                         hideLoader()
